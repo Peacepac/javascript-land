@@ -1,0 +1,292 @@
+*CSS Home*
+
+CSS stands for Cascading Style Sheets which is the language we use to style an HTML document and it also describes how HTML elements should be displayed.
+The style definitions are normally saved in external .css files.
+
+*CSS Syntax*
+
+A CSS rule consists of a selector and a declaration block.
+
+The selector points to the HTML element you want to style *h1*
+
+The declaration block contains one or more declarations separated by semicolons {color:blue; font-family:san-serif;}
+
+Each declaration includes a CSS property name and a value, separated by a colon.
+
+Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+
+
+*CSS Selectors*
+
+A CSS selector selects the HTML element(s) you want to style.
+
+  *Categories of CSS Selectors*
+
+1. Simple selectors : this select elements based on name, id, class e.g Navbar, nav-links
+
+2. Combinator selectors:  this select elements based on a specific relationship between them e.g Child Selector, Descendant Selector etc
+
+3. Pseudo-class selectors: this select elements based on a certain state e.g Hover on, Anchor Pseudo-classes etc
+
+4. Pseudo-elements selectors:  This select and style a part of an element e.g The ::after Pseudo-element, The ::before Pseudo-element etc
+
+5. Attribute selectors: This select elements based on an attribute or attribute value e.g [attribute*="value"] Selector, [attribute$="value"] Selector etc.
+
+
+*How To Add CSS*
+
+There are three ways of inserting a style sheet:
+
+External CSS: With an external style sheet, you can change the look of an entire website by changing just one file and Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.
+     <head>
+        <link rel="stylesheet" href="mystyle.css">
+     </head>
+
+Internal CSS: An internal style sheet may be used if one single HTML page has a unique style and the style is defined inside the <style> element, inside the head section.
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+
+Inline CSS: An inline style may be used to apply a unique style for a single element and they are defined within the "style" attribute of the relevant element.
+
+<h1 style="color:blue;text-align:center;">This is a heading</h1>
+
+*Cascading Order*
+
+All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+
+1. Inline style (inside an HTML element)
+2. External and internal style sheets (in the head section)
+3. Browser default
+
+
+*CSS Comments*
+
+Comments are ignored by browsers and are used to Comments are used to explain the code, and may also help when you edit the source code at a later date.
+
+A CSS comment is placed inside the <style> element, and starts with /* and ends with */:
+
+
+*CSS Colors*
+
+Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+<h1 style="color:Tomato;">Using Color Names</h1>
+<h1 style="background-color:#ff6347;">Using HEX code colors</h1>
+
+CSS RGB Colors*
+
+An RGB color value represents RED, GREEN, and BLUE light sources a color can be specified as an RGB value, using this formula: rgb(red, green, blue)
+
+*CSS HEX Colors*
+
+A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.
+
+
+*CSS HSL Colors*
+
+In CSS, a color can be specified using hue, saturation, and lightness (HSL) in the form: hsl(hue, saturation, lightness).
+
+
+*CSS Backgrounds*
+
+The CSS background properties are used to add background effects for elements.
+h1 {
+  background-color: green;
+}
+
+*CSS Background Image*
+
+The background-image property specifies an image to use as the background of an element.
+body {
+  background-image: url("paper.gif");
+}
+
+
+*CSS background-attachment*
+
+The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):
+Specify that the background image should be fixed:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+
+*CSS background - Shorthand property*
+
+To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+
+Instead of writing:
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+Use the shorthand property to set the background properties in one declaration:
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+
+
+*CSS Borders*
+
+The CSS border properties allow you to specify the style, width, and color of an element's border.
+The following values are allowed:
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+
+
+
+*CSS Margins*
+
+Margins are used to create space around elements, outside of any defined borders.
+CSS has properties for specifying the margin for each side of an element:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+Set different margins for all four sides of a <p> element:
+
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+
+*CSS Padding*
+
+Padding is used to create space around an element's content, inside of any defined borders.
+CSS has properties for specifying the padding for each side of an element:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+Set different padding for all four sides of a <div> element:  
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+
+*CSS Height, Width and Max-width*
+
+The CSS height and width properties are used to set the height and width of an element.
+
+The CSS max-width property is used to set the maximum width of an element.
+Set the height and width of a <div> element:
+
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+
+
+*CSS Box Model*
+
+In CSS, the term "box model" is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+
+*CSS Outline*
+
+An outline is a line drawn outside the element's border.
+CSS has the following outline properties:
+
+outline-style
+outline-color
+outline-width
+outline-offset
+outline
+
+
+*CSS Text*
+CSS has a lot of properties for formatting text.
+
+*Text Color:* The color property is used to set the color of the text.
+
+*CSS Text Alignment*
+The text-align property is used to set the horizontal alignment of a text, a text can be left or right aligned, centered, or justified.
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+
+
+*CSS Fonts*
+
+Choosing the right font has a huge impact on how the readers experience a website.
+
+The right font can create a strong identity for your brand.
+
+Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
+In CSS there are five generic font families:
+
+1. Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+2. Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+3. Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. 
+4. Cursive fonts imitate human handwriting.
+5. Fantasy fonts are decorative/playful fonts.
+
+
+The CSS font-family Property
+In CSS, we use the font-family property to specify the font of a text.
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+*CSS Web Safe Fonts*
+Web safe fonts are fonts that are universally installed across all browsers and devices.
+
+Example
+Here, there are three font types: Tahoma, Verdana, and sans-serif. The second and third fonts are backups, in case the first one is not found.
+
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+
+
