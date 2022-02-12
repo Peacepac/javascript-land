@@ -1,3 +1,354 @@
+JavaScript is a very powerful client-side scripting language.It   is used mainly for enhancing the interaction of a user with the webpage. In other words, you can make your webpage more lively and interactive, with the help of JavaScript. 
+
+You should place all your JavaScript code within <script> tags (<script> and </script>) if you are keeping your JavaScript code within the HTML document itself. This helps your browser distinguish your JavaScript code from the rest of the code
+
+Example:
+<html>
+<head>
+ <title>My First JavaScript code!!!</title>
+ <script>
+  alert("Hello World!");
+ </script>
+</head>
+<body>
+</body>
+</html>
+
+
+JavaScript Variable: Declare, Assign a Value with Example
+
+Variables are used to store values (name = “John”) or expressions (sum = x + y).
+
+Declare Variables in JavaScript
+
+Before using a variable, you first need to declare it. You have to use the keyword var, const, let to declare a variable like this:
+
+VAR
+var name;
+
+Assign a Value to the Variable
+
+You can assign a value to the variable either while declaring the variable or after declaring the variable.
+
+var name = "John";
+
+OR
+var name; 
+name = "John";
+
+
+Naming Variables
+
+variable names should start with a letter and they are case sensitive. Hence the variables student name and studentName are different because the letter n in a name is different (n and N).
+
+<html>
+<head>
+<title>Variables!!!</title>
+<script>
+var one = 22;
+var two = 3;
+var add = one + two;
+var minus = one - two;
+var multiply = one * two;
+var divide = one/two;
+ document.write("First No: = " + one + "<br />Second No: = " + two + " <br />");
+ document.write(one + " + " + two + " = " + add + "<br/>");
+ document.write(one + " - " + two + " = " + minus + "<br/>");
+ document.write(one + " * " + two + " = " + multiply + "<br/>");
+ document.write(one + " / " + two + " = " + divide + "<br/>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+LET
+Variables defined with let cannot be redeclared
+
+Example
+let x = "John Doe";
+
+let x = 0;
+
+// SyntaxError: 'x' has already been declared
+
+Redeclaring a variable with let, in another block, IS allowed:
+
+Example
+<h2>JavaScript let</h2>
+
+<p>Redeclaring a variable with <b>let</b>, in another s<h2>JavaScript let</h2>
+
+<p>Redeclaring a variable with <b>let</b>, in another scopecope, or in another block, is allowed:</p>
+
+<p id="demo"></p>
+<script>
+let x = 2; p id="demo"></p>
+<script>
+let x = 2;   // Allowed
+
+{
+  let x = 3;   // Allowed
+}
+
+{
+  let x = 4;   <p>Redeclaring a variable with <b>let</b>, in another s<h2>JavaScript let</h2>
+
+<p>Redeclaring a variable with <b>let</b>, in another scopecope, or in another block, is allowed:</p>
+
+<p id="demo"></p>
+<script>
+let x = 2; p id="demo"></p>
+<script<p>Redeclaring a variable with <b>let</b>, in another s<h2>JavaScript let</h2>
+
+<p>Redeclaring a variable with <b>let</b>, in another scopecope, or in another block, is allowed:</p>
+
+<p id="demo"></p>
+<script>
+let x = 2; p id="demo"></p>
+<script>
+let x = 2;   // Allowed
+
+{
+
+Const
+A const variable cannot be reassigned but it  must be assigned a value when they are declared:
+Example:
+const PI = 3.14159265359;
+
+NOT
+
+const PI;
+PI = 3.14159265359;
+
+
+JavaScript Array Methods: Create with Example
+
+An array is an object that can store a collection of items.It is used to store large amount of data of the same type
+
+Suppose you want to store details of 500 employees. If you are using variables, you will have to create 500 variables whereas you can do the same with a single array. You can access the items in an array by referring to its indexnumber and the index of the the first element of an array is zero.
+
+JavaScript Create Array
+
+You can create an array in JavaScript as given below.
+
+var students = ["John", "Ann", "Kevin"];
+
+Here, you are initializing your array as and when it is created with values “John”, “Ann” and “Kevin”.The index of “John”, “Ann” and “Kevin” is 0, 1 and 2 respectively. If you want to add more elements to the students array, you can do it like this:
+
+students[3] = "Emma"; students[4] = "Rose";
+
+You can also create an array using Array constructor like this:
+
+var students = new Array("John", "Ann", "Kevin");
+
+OR
+
+var students = new Array(); students[0] = "John"; students[1] = "Ann"; students[2] = "Kevin";
+
+Array Methods
+
+The Array object has many properties and methods which help developers to handle arrays easily and efficiently. You can get the value of a property by specifying arrayname.property and the output of a method by specifying arrayname.method().
+
+length property –> If you want to know the number of elements in an array, you can use the length property.
+
+prototype property –> If you want to add new properties and methods, you can use the prototype property.
+
+reverse method –> You can reverse the order of items in an array using a reverse method.
+
+sort method –> You can sort the items in an array using sort method.
+
+pop method –> You can remove the last item of an array using a pop method.
+
+shift method –> You can remove the first item of an array using shift method.
+
+push method –> You can add a value as the last item of the array.
+
+Example:
+
+<title>Arrays!!!</title>
+<script>
+var students = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+Array.prototype.displayItems=function();
+for (i=0;i<this.length;i++){
+document.write(this[i] + "<br />");
+}
+
+} 
+
+document.write("students array<br />");
+students.displayItems();
+document.write("<br />The number of items in students array is " + students.length + "<br />");
+
+document.write("<br />The SORTED students array<br />");
+
+students.sort();
+
+students.displayItems();
+document.write("<br />The REVERSED students array<br />");
+students.reverse();
+students.displayItems();
+
+document.write("<br />THE students array after REMOVING the LAST item<br />");
+
+students.pop();
+students.displayItems();
+document.write("<br />THE students array after PUSH<br />");
+students.push("New Stuff");
+students.displayItems();
+</script>
+
+
+JavaScript Functions
+
+JavaScript function is a block of code designed to perform a particular task. It is executed when something invokes it (calls it).
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+Function Syntax
+
+is defined with the function keyword, followed by a name, followed by parentheses ().
+ code to be executed, by the function, is placed inside curly brackets: {}
+
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+Function arguments are the values received by the function when it is invoked.
+
+
+Function Return
+When JavaScript reaches a return statement, the function will stop executing.
+
+
+Functions often compute a return value. The return value is "returned" back to the "caller":
+
+Example
+
+Calculate the product of two numbers, and return the result:
+
+<p id="peace"></p>
+
+<script>
+var x = myFunction(4, 3);
+document.getElementById("peace").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+</script>
+
+Example 2
+
+Convert Fahrenheit to Celsius:
+
+<p id="peace"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("peace").innerHTML = toCelsius(77);
+</script>
+
+The () Operator Invokes the Function
+
+Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+
+Accessing a function without () will return the function object instead of the function result.
+
+Example
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+</script>
+
+Local Variables
+
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+Local variables can only be accessed from within the function.
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let carName = "Volvo";
+  document.getElementById("demo1").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML =
+typeof carName;
+</script>
+
+JavaScript Objects
+In real life, a car is an object.
+
+A car has properties like weight and color, and methods like start and stop
+Objects are variables too. But objects can contain many values.
+is a common practice to declare objects with the const keyword
+
+Object Definition
+You define (and create) a JavaScript object with an object literal:
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+Accessing Object Properties
+
+You can access object properties in two ways:
+
+objectName.propertyName
+
+or
+
+objectName["propertyName"]
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     :  5566
+};
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName;
+
+OR
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person["firstName"] + " " + person["lastName"];
+</script>
+
 *JavaScript Events*
 
 An HTML event can be something the browser does, or something a user does.
@@ -43,3 +394,324 @@ let length = text.length;
 Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
 
 But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+In an object method, this refers to the object.Alone, this refers to the global object.In a function, this refers to the global object.In a function, in strict mode, this is undefined.In an event, this refers to the element that received the event.Methods like call(), apply(), and bind() can refer this to any object
+
+In a function definition, this refers to the "owner" of the function.
+
+In the example above, this is the person object that "owns" the fullName function.
+
+In other words, this.firstName means the firstName property of this object.
+
+
+For, While and Do While LOOP in JavaScript
+Loops are useful when you have to execute the same lines of code repeatedly, for a specific number of times or as long as a specific condition is true.
+Different Types of Loops
+for loop
+
+for/in a loop (explained later)
+
+while loop
+
+do…while loop
+
+
+for loop
+
+Syntax:
+
+for(statement1; statement2; statment3) { lines of code to be executed }
+The statement1 is executed first even before executing the looping code. So, this statement is normally used to assign values to variables that will be used inside the loop.
+The statement2 is the condition to execute the loop.
+The statement3 is executed every time after the looping code is executed. 
+Example:
+<html>
+<head>
+ <script type="text/javascript">
+  var students = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+  document.write("<b>Using for loops </b><br />");
+  for (i=0;i<students.length;i++)
+  {
+  document.write(students[i] + "<br />");
+  }
+ </script>
+</head>
+<body>
+</body>
+</html>
+
+
+while loop
+Syntax:
+
+while(condition)
+
+{
+
+lines of code to be executed
+
+}
+The “while loop” is executed as long as the specified condition is true. Inside the while loop, you should include the statement that will end the loop at some point of time. Otherwise, your loop will never end and your browser may crash.
+
+
+ <script>
+  document.write("<b>Using while loops </b><br />");
+  var i = 0, j = 1, k;
+  document.write("Fibonacci series less than 40<br />");
+  while(i<40)
+  {
+   document.write(i + "<br />");
+   k = i+j;
+   i = j;
+   j = k;
+  }
+ </script>
+
+do…while loop
+
+Syntax:
+
+do { block of code to be executed } while (condition)
+
+The do…while loop is very similar to while loop. The only difference is that in do…while loop, the block of code gets executed once even before checking the condition
+ <script>
+  document.write("<b>Using do...while loops </b><br />");
+  var i = 2;
+  document.write("Even numbers less than 20<br />");
+  do
+  {
+   document.write(i + "<br />");
+   i = i + 2;
+  }while(i<20)
+ </script>
+
+
+JavaScript Conditional Statements: IF, Else, Else IF
+
+Conditional statements are used to decide the flow of execution based on different conditions. If a condition is true, you can perform one action and if the condition is false, you can perform another action
+statements in JavaScript.
+
+If statement
+
+If…Else statement
+
+If…Else If…Else statement
+
+If statement
+
+Syntax:
+
+if (condition) { lines of code to be executed if condition is true }
+
+You can use If statement if you want to check only a specific condition.
+
+Example
+
+ <title>IF Statments!!!</title>
+ <script>
+  var age = prompt("Please enter your age");
+  if(age>=18)
+  document.write("You are an adult <br />");
+  if(age<18)
+  document.write("You are NOT an adult <br />");
+ </script>
+
+If…Else statement
+
+Syntax:
+
+if (condition) { lines of code to be executed if the condition is true } else { lines of code to be executed if the condition is false }
+
+You can use If….Else statement if you have to check two conditions and execute a different set of codes.
+
+
+ <title>If...Else Statments!!!</title>
+ <script>
+  // Get the current hours 
+  var hours = new Date().getHours();
+  if(hours<12)
+  document.write("Good Morning!!!<br />");
+  else
+  document.write("Good Afternoon!!!<br />");
+ </script>
+
+If…Else If…Else statement
+Syntax:
+
+if (condition1)
+
+{
+
+lines of code to be executed if condition1 is true
+
+}
+
+else if(condition2)
+
+{
+
+lines of code to be executed if condition2 is true
+
+}
+
+else
+
+{
+
+lines of code to be executed if condition1 is false and condition2 is false
+
+}
+You can use If….Else If….Else statement if you want to check more than two conditions
+
+
+
+ <script>
+  var one = prompt("Enter the first number");
+  var two = prompt("Enter the second number");
+  one = parseInt(one);
+  two = parseInt(two);
+  if (one == two)
+   document.write(one + " is equal to " + two + ".");
+  else if (one<two)
+   document.write(one + " is less than " + two + ".");
+  else
+   document.write(one + " is greater than " + two + ".");
+ </script>
+
+
+JavaScript Maps
+
+Essential Map Methods
+Method Description
+new Map()    Creates a new Map
+set()    Sets the value for a key in a Map
+get()    Gets the value for a key in a Map
+delete()    Removes a Map element specified by the key
+has() Returns true if a key exists in a Map
+forEach() Calls a function for each key/value pair in a Map
+entries() Returns an iterator with the [key, value] pairs in a Map
+Property Description
+size Returns the number of elements in a Map
+How to Create a Map
+
+The new Map() Method
+You can create a Map by passing an Array to the new Map() constructor:
+
+// Create a Map 
+const fruits = new Map([
+  ["apples", 500]
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+</script>
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200],
+]);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+</script>
+
+
+The set() Method
+
+You can add elements to a Map with the set() method:
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.set():</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+</script>
+
+
+The set() method can also be used to change existing Map values:
+
+Example
+
+fruits.set("apples", 200);
+
+The get() Method
+
+The get() method gets the value of a key in a Map:
+
+(fruits.get("apples");    // Returns 500)
+Example
+document.getElementById("demo").innerHTML = fruits.get("apples");
+
+The size Property
+
+The size property returns the number of elements in a Map:
+Example
+
+fruits.size;
+
+The delete() Method
+
+The delete() method removes a Map element:
+
+Example
+
+fruits.delete("apples");
+
+
+ has() Method
+
+The has() method returns true if a key exists in a Map:
+
+Example
+
+fruits.has("apples");
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Maps</h2>
+<p>Using Map.has():</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+// Delete an Element
+fruits.delete("apples");
+
+document.getElementById("demo").innerHTML = fruits.has("apples");
+</script>
