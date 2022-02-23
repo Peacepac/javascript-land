@@ -715,3 +715,312 @@ fruits.delete("apples");
 
 document.getElementById("demo").innerHTML = fruits.has("apples");
 </script>
+
+*JavaScript typeof*
+In JavaScript there are 5 different data types that can contain values:
+
+string
+number
+boolean
+object
+function
+
+There are 6 types of objects:
+
+Object
+Date
+Array
+String
+Number
+Boolean
+And 2 data types that cannot contain values:
+
+null
+undefined
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null;
+</script>
+
+The typeof operator is used to get the data type (returns a string) of its operand. The operand can be either a 
+literal or a data structure such as a variable, a function, or an object. The operator returns the data type.
+
+
+
+Syntax
+
+typeof operand
+or
+typeof (operand)
+
+<script>
+var index = 8;
+  var result = (typeof index === 'number');
+  alert(result);
+  // Output: true
+var description = "w3resource";
+  var result = (typeof description === 'string');
+  alert(result); 
+  // Output: true
+
+</script>
+
+*JavaScript Type Conversion*
+Converting Strings to Numbers
+The global method Number() can convert strings to numbers.
+Number("3.14")    // returns 3.14
+Number(" ")       // returns 0
+Number("")        // returns 0
+Number("99 88")   // returns NaN
+*Number Methods*
+Method	Description
+Number()	Returns a number, converted from its argument
+parseFloat()	Parses a string and returns a floating point number
+parseInt()	Parses a string and returns an integer
+
+
+*Converting Numbers to Strings*
+The global method String() can convert numbers to strings.
+<p id="demo"></p>
+
+<script>
+let x = 123;
+document.getElementById("demo").innerHTML =
+  String(x) + "<br>" +
+  String(123) + "<br>" +
+  String(100 + 23);
+</script>
+
+The Number method toString() does the same.<p id="tostring"></p>
+
+<script>
+let x = 123;
+document.getElementById("tostring").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+
+Converting Dates to Numbers
+The global method Number() can be used to convert dates to numbers
+/ program to convert date to number
+// create date
+const d1 = new Date();
+console.log(d1);
+
+// converting to number
+const result = d1.getTime();
+console.log(result);
+
+The date method getTime() does the same.
+To convert the name to a number, we use the getTime() method.
+const d1 = new Date().getTime();
+console.log(d1); // 1604898452084
+
+*Converting Dates to Strings*
+script>
+   // Here a date has been assigned
+   // while creating Date object
+   var dateobj = 
+   new Date('October 15, 1996 05:35:32');
+  
+   // Contents of above date object is converted
+   // into a string using toString() function.
+   var B = dateobj.toString();
+  
+   // Printing the converted string.
+   document.write(B);
+</script>
+
+*Converting Booleans to Numbers*
+<!DOCTYPE html>
+<html>
+<body>
+	<center>
+		<h1 style="color:green">GeeksforGeeks</h1>
+		<p>Click the button to change the boolean value.</p>
+		<script>
+			// Initializing boolvalue as true
+			var boolvalue = true;
+			// Initializing boolvalue2 as false
+			var boolvalue2 = false;
+		</script>
+		<button onclick="myFunction()">Change</button>
+		<p>The value of the variable 1 is now:</p>
+		<p id="result"></p>
+		<p>The value of the variable 2 is now:</p>
+		<p id="result2"></p>
+		<script>
+			// JavaScript program to illustrate boolean
+			// conversion using bitwise operator
+			function myFunction(){
+				var i = boolvalue & 1;
+				var j = boolvalue2 | 0;
+				document.getElementById("result").innerHTML = i;
+				document.getElementById("result2").innerHTML = j;
+			}
+		</script>
+</body>
+</html>
+		
+
+
+
+*Converting Booleans to Strings*
+<p id="demo"></p>
+
+<script>
+let bool = true;
+let text = bool.toString(); 
+document.getElementById("demo").innerHTML = typeof text;
+</script>
+
+
+*JavaScript Errors*
+The try...catch...finally statements combo handles errors without stopping JavaScript.
+
+The try statement defines the code block to run (to try).
+
+The catch statement defines a code block to handle any error.
+
+The finally statement defines a code block to run regardless of the result.
+
+The throw statement defines a custom error.
+
+Both catch and finally are optional, but you must use one of them.
+
+try {
+  tryCode - Code block to run
+}
+catch(err) {
+  catchCode - Code block to handle errors
+}
+finally {
+  finallyCode - Code block to be executed regardless of the try result
+}
+
+
+*JavaScript Hoisting*
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+Declaration –> Initialisation/Assignment –> Usage 
+// Variable lifecycle
+let a;        // Declaration
+a = 100;      // Assignment
+console.log(a);  // Usage
+
+// hoisting
+function codeHoist(){
+	a = 10;
+	let b = 50;
+}
+codeHoist();
+
+console.log(a); // 10
+console.log(b); // ReferenceError : b is not defined
+
+
+*JavaScript Use Strict*
+"use strict"; Defines that JavaScript code should be executed in "strict mode".
+
+The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+With strict mode, you can not, for example, use undeclared variables.
+
+*Declaring Strict Mode*
+<script>
+"use strict";
+myFunction();
+
+function myFunction() {
+  y = 3.14;   // This will cause an error (y is not defined)
+}
+</script>
+
+
+*The JavaScript this Keyword*
+
+In an object method, this refers to the object.
+example
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+Alone, this refers to the global object.
+example
+<script>
+let x = this;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+In a function, this refers to the global object.
+example
+<script>
+document.getElementById("demo").innerHTML = myFunction();
+
+function myFunction() {
+  return this;
+}
+</script>
+
+In a function, in strict mode, this is undefined.
+example
+<script>
+"use strict";
+document.getElementById("demo").innerHTML = myFunction();
+
+function myFunction() {
+  return this;
+}
+</script>
+In an event, this refers to the element that received the event.
+example
+
+Methods like call(), apply(), and bind() can refer this to any object.
+
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+
+
